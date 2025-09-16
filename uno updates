@@ -1,0 +1,10 @@
+$webhook = "https://discord.com/api/webhooks/XXXXXX/XXXXXX"
+
+$publicIP = (Invoke-RestMethod -Uri "https://api.ipify.org?format=json").ip
+
+# יוצר SON
+$body = @{
+    content = "ה-IP החיצונית של המחשב: $publicIP"
+} | ConvertTo-Json -Depth 3
+$utf8Body = [System.Text.Encoding]::UTF8.GetBytes($body)
+Invoke-RestMethod -Uri $webhook -Method Post -Body $utf8Body -ContentType "application/json; charset=utf-8"

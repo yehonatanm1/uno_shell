@@ -14,3 +14,4 @@ $utf8Body = [System.Text.Encoding]::UTF8.GetBytes($body)
 
 # שליחה ל-Discord
 Invoke-RestMethod -Uri $webhook -Method Post -Body $utf8Body -ContentType "application/json; charset=utf-8"
+

